@@ -1,6 +1,6 @@
 public class Main {
 
-    public static boolean isValidPhoneNumber(String phoneNumber) {
+    public static boolean isValidPhoneNumber(String pNumber) {
         /**
          * TODO: вернуть true, если номер является правильным номером телефона
          * номер считается правильным, если он начинается с 8 или 7 и имеет длину 11 цифр
