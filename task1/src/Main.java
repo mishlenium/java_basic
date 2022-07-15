@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.StringUtils;
+
 public class Main {
 
     public static boolean isValidPhoneNumber(String pNumber) {
@@ -15,8 +17,15 @@ public class Main {
          *
          * Для проверки того, что строка является числом нужно использовать утилиту StringUtils от Apache
          */
-
-
-        return false;
+        if (pNumber.length() != 11) {
+            return false;
+        }
+        if (pNumber.charAt(0) != '7' && pNumber.charAt(0) != '8') {
+            return false;
+        }
+        if (!StringUtils.isNumeric(pNumber)) {
+            return false;
+        }
+        return true;
     }
 }
