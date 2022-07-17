@@ -55,13 +55,15 @@ public class Basket {
             return;
         }
 
-        items = items + "\n" + name + " - " +
-            count + " шт. - " + price;
+        items = items + "\n" + name + " ; " +
+            count + " шт. ; " + price + " r.";
         totalPrice = totalPrice + count * price;
+
+        totalWeight = totalWeight + count;
     }
 
     public void add(String name, int price, int count, double weight) {
-        totalWeight += weight;
+
         add(name, price, count);
     }
     public void clear() {
@@ -82,7 +84,10 @@ public class Basket {
         if (items.isEmpty()) {
             System.out.println("Корзина пуста");
         } else {
+            System.out.println("=".repeat(100));
             System.out.println(items);
+            System.out.println("-".repeat(50));
+            System.out.println(totalWeight + " kg.");
         }
     }
 }
